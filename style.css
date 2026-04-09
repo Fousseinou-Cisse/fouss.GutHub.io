@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -148,12 +152,18 @@ body {
 .accueil-info p{
     font-size: 26px;
     margin: 10px 0 25px;
+    font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
+
 .accueil-info .tel{
     display: flex;
     align-items: center;
 }
 .tel-cv{
+    margin-top: -7%;
     font-size: 150%;
     display: inline-block;
     padding: 10px 30px;
@@ -181,7 +191,7 @@ box-shadow: none;
     height: 45px;
     border: 2px solid cyan;
     border-radius: 50%;
-    font-size: 22px; 
+    font-size: 52px; 
     color: white; 
     text-decoration: none;
     margin-right: 10px;
@@ -192,6 +202,12 @@ box-shadow: none;
     background: cyan;
     color: #1f242d;
     box-shadow: 0 0 10px cyan;
+}
+.icons {
+    margin-right: 7%;
+    margin-top: 15%;
+    display: flex;
+    gap: 25px; /* espace entre les icônes */
 }
 /* image */
 .image .img-box {
@@ -240,6 +256,7 @@ box-shadow: none;
 
 /* Titre */
 .contact-container h1 {
+    margin-top: 23% ;
 text-align: center;
 margin-bottom: 20px;
 }
@@ -289,10 +306,10 @@ color: cyan;
 border: 2px solid cyan;
 }
 form {
-    margin-top: -10px;
+    margin-top: -1%;
 }
 .contact-texte {
-    margin-top: -350px;
+    margin-top: -7%;
     color: white;
     margin-bottom: 20px;
     font-size: 18px;
@@ -444,6 +461,26 @@ form {
 
 
 /*À propos*/
+
+.project-image {
+    display: flex;
+    justify-content: center; /* centre l’image */
+    margin-top: 60px;
+}
+
+.project-image img {
+    width: 300px; /* taille de l’image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    transition: 0.3s;
+}
+
+/* effet au survol */
+.project-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
 /*  Présentation */
 .presentation {
 
@@ -615,7 +652,7 @@ form {
     margin-bottom: 20px;
 }
 
-/*contact*/
+/*Bloc*/
 /* Introduction  */
 .contact-intro {
     margin-top: 8%;
@@ -636,39 +673,10 @@ form {
     margin-bottom: 20px;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;             
-    align-items: flex-start; 
-}
 
-.contact-item {
-    margin-left: 4%;
-    display: flex;
-    align-items: center;
-    gap: 25px; 
-    font-size: 18px;
-    color: white;
-}
-
-.contact-item i {
-    
-    margin-left: 4px;
-    font-size: 98px;      
-    color: cyan;           
-}
-
-.contact-item a {
-    color: cyan;           
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    text-decoration: underline; 
-}
 
 /*projets*/
+
 
 
 .project-video {
@@ -786,6 +794,187 @@ form {
 
 /* pour qu' il s'affiche sur un teléphone */
 @media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-left {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row; /* menu horizontal scrollable */
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .navbar ul li {
+        flex: 0 0 auto;
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .navbar ul::-webkit-scrollbar { display: none; }
+
+    /* Accueil */
+    .accueil {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 100px 5% 40px;
+    }
+
+    .accueil-info h1 { font-size: 28px; }
+    .accueil-info h2 { font-size: 20px; }
+    .accueil-info p, .accueil-info h3 { font-size: 16px; line-height: 1.4; }
+
+    .accueil-info .tel {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tel-cv {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        margin-right: 8px;
+    }
+
+    .call-icon {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .phone-number {
+        font-size: 18px;
+    }
+
+    .cv-button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    /* Image */
+    .image {
+        margin: 20px 0;
+    }
+
+    .image .img-box {
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .image .img-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Formulaire */
+    .contact, .project-form {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .sortie {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sortie input, textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .bouton, .project-form button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* Footer */
+    .footer-accueil,
+    .footer-contact,
+    .footer-about,
+    .footer-projets {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Sections textes */
+    .presentation h2,
+    .about-propos h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    .presentation p,
+    .about-propos p {
+        text-align: center;
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    /* Parcours et listes */
+    .parcours {
+        padding: 20px 5%;
+    }
+
+    .parcours ul li {
+        font-size: 18px;
+    }
+
+    /* Vidéos et projets */
+    .project-video video,
+    .langage-video video {
+        width: 100%;
+    }
+
+    .langage-video, .Langage-C h2, .langage {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Sécurité */
+    .sécurité-image {
+        gap: 20px;
+    }
+
+    .sécurité-image img {
+        width: 100%;
+        height: auto;
+    }
+
+}@media screen and (max-width: 768px) {
 
     /* Navbar */
     .navbar {
@@ -969,4 +1158,128 @@ form {
     .navbar ul::-webkit-scrollbar {
         display: none;
     }
+} 
+
+
+/* les modifications*/
+
+.project-form {
+    margin-top: 40px;
+    padding: 30px;
+    background: #2a2f3a;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+.project-form h2 {
+    text-align: center;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+.project-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-form input,
+.project-form textarea {
+    padding: 12px;
+    border: 2px solid cyan;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.project-form textarea {
+    resize: none;
+}
+
+.project-form button {
+    padding: 12px;
+    background: cyan;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.project-form button:hover {
+    background: transparent;
+    color: cyan;
+    border: 2px solid cyan;
+}
+.project-form {
+    margin: 40px auto; /* centre horizontalement */
+}
+
+.project-form textarea {
+    width : 380px; /* augmente la hauteur */
+}
+
+.call-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* espace entre icône et numéro */
+}
+
+.call-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.call-icon a:hover {
+    background: cyan;
+    color: #1f242d;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Numéro */
+.phone-number {
+    color: cyan;
+    font-size: 24px;
+    text-align: center;
+}
+
+/*cv*/
+
+/* Bouton téléchargement CV */
+.cv-download {
+    margin-top: 20px;
+}
+
+.cv-button {
+    display: inline-block;
+    background-color: cyan;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cv-button i {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.cv-button:hover {
+    background-color: #e55b00;
+    transform: translateY(-2px);
 }
